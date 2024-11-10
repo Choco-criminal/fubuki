@@ -19,17 +19,17 @@ load_dotenv()
 
 # Get it from my.telegram.org
 
-API_ID = int(getenv("API_ID", ""))
+API_ID = int(getenv("API_ID", "25475489"))
 
-API_HASH = getenv("API_HASH")
+API_HASH = getenv("API_HASH","3fc2b371f4fbb0166758736414d8be92")
 
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN","7617090520:AAH6OqlzkAGlJUhtd6O3yd9sRfDo6lxwn00")
 
-BOT_USERNAME = getenv("BOT_USERNAME", "musicXanime_bot")
+BOT_USERNAME = getenv("BOT_USERNAME", "Fubuki_cutibot")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://Choco:Choco@cluster0.yddf3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 
 CLEANMODE_DELETE_MINS = int(
@@ -77,7 +77,7 @@ LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "7297381612").split())
+    map(int, getenv("OWNER_ID", "1266240012").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -90,7 +90,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Moonshining1/ANNIE-MUSIC",
+    "",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -114,11 +114,11 @@ SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/Kittyxupdates"
 )  # Example:- https://t.me/VIP_CREATORS
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/TG_FRIENDSS"
+    "SUPPORT_GROUP", "https://t.me/ANIME_CHAT_ANG"
 )  # Example:- https://t.me/TG_FRIENDSS
 
 SUPPORT_CHAT = getenv(
-    "SUPPORT_GROUP", "https://t.me/Grandxmasti"
+    "SUPPORT_GROUP", "https://t.me/ANIME_CHAT_ANG"
 )  # Example:- https://t.me/Grandxmasti
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", False)
@@ -141,7 +141,7 @@ TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
 
 # Your Github Repo.. Will be shown on /start Command
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/Moonshining1/ANNIE-MUSIC")
+GITHUB_REPO = getenv("GITHUB_REPO", "")
 
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
@@ -181,7 +181,7 @@ SET_CMDS = getenv("SET_CMDS", "False")
 
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @VIPStringBot
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION", "BQE0sAkAnWlasjAlnZTT81OtJJRpp43rE1Y5c2nZ0TzGdp74Tm8-gvpCqw2lkwwYG0zH8cLn-lFLb-6sBkpyjhX7yPrqZP6Qcxl3FtGrIjsSPbRik5zu72M1FcUNYY_J2YfFFPShKIcvMXC8BZHQ4C584DZUZ0oA0lnZHlhrhwFYPyNn1yCOTWweAAzaRm9U6mc_GqzcdRP7a4eE1vXyxs1VqHjrrOuC3D0t6n9B_Jk8hO3XWLAtmob-FMADXMeG5XWEL5bRNOPIl-5OyYyShY4rxQA6P8aaoyKTHK8x-8BgI9tLS6XcQU4v_9CY6_rZHTjy2_JNclfLcVR_UNV1JFok2nvgegAAAAGdqX99AA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
