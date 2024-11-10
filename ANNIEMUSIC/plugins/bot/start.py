@@ -228,12 +228,12 @@ async def start_comm(client, message: Message, _):
                     f"{message.from_user.mention} ʜᴀs ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ<code> ᴠɪᴅᴇᴏ ɪɴғᴏʀᴍᴀᴛɪᴏɴ </code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀ ɴᴀᴍᴇ** {sender_name}",
                 )
     else:
-        out = music_start_panel(_)
-        await message.reply_video(
-            video=config.START_IMG_URL,
-            caption=_["TEXT"].format(message.from_user.mention, app.mention),
-            reply_markup=InlineKeyboardMarkup(out),
-        )
+    out = music_start_panel(_)
+    await message.reply_video(
+        video=config.START_IMG_URL,
+        caption="(⁠θ⁠‿⁠θ⁠) {0} \n\n● 𝙼𝚎𝚎𝚝 𝐅𝐮𝐛𝐮𝐤𝐢 ʏᴏᴜʀ ᴀʟʟ ɪɴ ᴏɴᴇ ʙᴏᴛ, ʀᴇᴀᴅʏ ᴛᴏ ᴛᴜʀɴ ᴜᴘ ᴛʜᴇ ʜᴇᴀᴛ.\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n◇ sʜᴇ ᴋɴᴏᴡs ᴇxᴀᴄᴛʟʏ ᴡʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ—sᴛʀᴇᴀᴍɪɴɢ 𝐦𝐮𝐬𝐢𝐜 ғʀᴏᴍ ᴀʟʟ ʏᴏᴜʀ ғᴀᴠᴏʀɪᴛᴇs, 𝐦𝐚𝐧𝐚𝐠𝐢ɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴡɪᴛʜ ᴀ sᴜʟᴛʀʏ ғɪɴᴇssᴇ.\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n◇ 𝐒𝐦𝐨𝐨𝐭𝐡, 𝐩𝐨𝐰𝐞𝐫𝐟𝐮𝐥, 𝐞𝐟𝐟𝐢𝐜𝐢𝐞𝐧𝐭, 𝐅𝐮𝐛𝐮𝐤𝐢 ᴡɪʟʟ ᴛᴀᴋᴇ ᴄᴏɴᴛʀᴏʟ ᴡʜɪʟᴇ ʏᴏᴜ sɪᴛ ʙᴀᴄᴋ, ʀᴇʟᴀx, ᴀɴᴅ ʟᴇᴛ ʜᴇʀ ᴡᴏʀᴋ ʜᴇʀ ᴍᴀɢɪᴄ.\n━━━━━━━━━━━━━━━━━━━━━━━━━━".format(message.from_user.mention),
+        reply_markup=InlineKeyboardMarkup(out),
+)
         if await is_on_off(config.LOG):
             sender_id = message.from_user.id
             sender_name = message.from_user.first_name
