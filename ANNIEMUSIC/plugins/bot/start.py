@@ -68,7 +68,7 @@ async def start_comm(client, message: Message, _):
     # Send a sticker when the bot starts
     await message.reply_sticker("CAACAgUAAxkDAAIEoWcm-PmfbFGDQWZ7u5kyCQUfqzFiAAIeCgACya4ZVWcoG8RVlky8NgQ")  # Replace with your sticker file ID or URL
 
-    await message.react("🕊️")
+    await message.react("💘")
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
@@ -76,8 +76,8 @@ async def start_comm(client, message: Message, _):
                 paginate_modules(0, HELPABLE, "help", close=True)
             )
             if config.START_IMG_URL:
-                return await message.reply_photo(
-                    photo=START_IMG_URL,
+                return await message.reply_video(
+                    video=START_IMG_URL,
                     caption=_["help_1"],
                     reply_markup=keyboard,
                 )
@@ -229,8 +229,8 @@ async def start_comm(client, message: Message, _):
                 )
     else:
         out = music_start_panel(_)
-        await message.reply_photo(
-            photo=config.START_IMG_URL,
+        await message.reply_video(
+            video=config.START_IMG_URL,
             caption=_["start_2"].format(message.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(out),
         )
@@ -250,8 +250,8 @@ async def testbot(client, message: Message, _):
     uptime = int(time.time() - _boot_)
     chat_id = message.chat.id
     if config.START_IMG_URL:
-        await message.reply_photo(
-            photo=config.START_IMG_URL,
+        await message.reply_video(
+            video=config.START_IMG_URL,
             caption=_["start_7"].format(app.mention, get_readable_time(uptime)),
             reply_markup=InlineKeyboardMarkup(out),
         )
