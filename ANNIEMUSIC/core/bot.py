@@ -1,4 +1,4 @@
-# Copyright (C) 2024 by Moonshining1@Github, <https://github.com/Moonshining1>.
+8# Copyright (C) 2024 by Moonshining1@Github, <https://github.com/Moonshining1>.
 # This file is part of <https://github.com/Moonshining1/ANNIE-MUSIC> project,
 # and is released under the "GNU v3.0 License Agreement".
 # Please see <https://github.com/Moonshining1/ANNIE-MUSIC/blob/master/LICENSE>
@@ -19,7 +19,6 @@ from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
 )
-
 import config
 
 from ..logging import LOGGER
@@ -112,52 +111,25 @@ class ANNIEBot(Client):
             try:
                 await self.set_bot_commands(
                     commands=[
-                        BotCommand("start", "Start the bot"),
-                        BotCommand("help", "Get the help menu"),
-                        BotCommand("ping", "Check if the bot is alive or dead"),
+                        BotCommand("⁠◉start", "Start the bot"),
+                        BotCommand("⁠◉help", "Get the help menu"),
+                        
                     ],
                     scope=BotCommandScopeAllPrivateChats(),
                 )
                 await self.set_bot_commands(
                     commands=[
-                        BotCommand("play", "Start playing requested song"),
-                        BotCommand("stop", "Stop the current song"),
-                        BotCommand("pause", "Pause the current song"),
-                        BotCommand("resume", "Resume the paused song"),
-                        BotCommand("queue", "Check the queue of songs"),
-                        BotCommand("skip", "Skip the current song"),
-                        BotCommand("volume", "Adjust the music volume"),
-                        BotCommand("lyrics", "Get lyrics of the song"),
+                        BotCommand("⁠◉play", "Start playing requested song"),
+                        
                     ],
                     scope=BotCommandScopeAllGroupChats(),
                 )
                 await self.set_bot_commands(
                     commands=[
-                        BotCommand("start", "❥ Start the bot"),
-                        BotCommand("ping", "❥ Check the ping"),
-                        BotCommand("help", "❥ Get help"),
-                        BotCommand("vctag", "❥ Tag all for voice chat"),
-                        BotCommand("stopvctag", "❥ Stop tagging for VC"),
-                        BotCommand("tagall", "❥ Tag all members by text"),
-                        BotCommand("cancel", "❥ Cancel the tagging"),
-                        BotCommand("settings", "❥ Get the settings"),
-                        BotCommand("reload", "❥ Reload the bot"),
-                        BotCommand("play", "❥ Play the requested song"),
-                        BotCommand("vplay", "❥ Play video along with music"),
-                        BotCommand("end", "❥ Empty the queue"),
-                        BotCommand("playlist", "❥ Get the playlist"),
-                        BotCommand("stop", "❥ Stop the song"),
-                        BotCommand("lyrics", "❥ Get the song lyrics"),
-                        BotCommand("song", "❥ Download the requested song"),
-                        BotCommand("video", "❥ Download the requested video song"),
-                        BotCommand("gali", "❥ Reply with fun"),
-                        BotCommand("shayri", "❥ Get a shayari"),
-                        BotCommand("love", "❥ Get a love shayari"),
-                        BotCommand("sudolist", "❥ Check the sudo list"),
-                        BotCommand("owner", "❥ Check the owner"),
-                        BotCommand("update", "❥ Update bot"),
-                        BotCommand("gstats", "❥ Get stats of the bot"),
-                        BotCommand("repo", "❥ Check the repo"),
+                        BotCommand("start", "⁠◉ Start the bot"),
+                        BotCommand("ping", "⁠◉ Check the ping"),
+                        BotCommand("help", "⁠◉ Get help"),
+                        
                     ],
                     scope=BotCommandScopeAllChatAdministrators(),
                 )
