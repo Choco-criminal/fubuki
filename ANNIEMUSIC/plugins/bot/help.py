@@ -496,21 +496,15 @@ async def tools_callback_cb(client, CallbackQuery, _):
 async def about_callback(client: Client, callback_query: CallbackQuery):
     buttons = [
         [
-            InlineKeyboardButton(text="🇲σ᭡፝֟ɳ🌙", url=f"https://t.me/about_ur_moonshining/5"),
-            InlineKeyboardButton(
-                text="Owner's clan 🎄", url=f"https://t.me/grandxmasti"
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="🎄 Galaxy 🎄", callback_data="galaxy"),
-            InlineKeyboardButton(text="⭐ Help ⭐", callback_data="features"),
+            InlineKeyboardButton(text="Galaxy", callback_data="galaxy"),
+            InlineKeyboardButton(text="Help", callback_data="features"),
         ],
         [
             InlineKeyboardButton(text="🔙 Back", callback_data="about")
         ],  # Use a default label for the back button
     ]
     await callback_query.message.edit_text(
-        "**Hey,**\n\n**I am Annie bot ✨**\n**I am created with love by my [🇲σ᭡፝֟ɳ](https://t.me/about_ur_moonshining/5)🌙 ❤.**",
+        "**Hey,**\n\n**I am Annie bot ✨**\n**I am created with love .**",
         reply_markup=InlineKeyboardMarkup(buttons),
     )
 
@@ -518,23 +512,18 @@ async def about_callback(client: Client, callback_query: CallbackQuery):
 @app.on_callback_query(filters.regex("feature"))
 async def feature_callback(client: Client, callback_query: CallbackQuery):
     keyboard = [
+       
         [
-            InlineKeyboardButton(
-                text="🎄 Galaxy 🎄",
-                callback_data="galaxy",
-            ),
+            InlineKeyboardButton(text="Music ", callback_data="music"),
+            InlineKeyboardButton(text="Managment ", callback_data="management"),
         ],
         [
-            InlineKeyboardButton(text="Music 🎧", callback_data="music"),
-            InlineKeyboardButton(text="Managment ✔", callback_data="management"),
-        ],
-        [
-            InlineKeyboardButton(text="Tools✨", callback_data="tools"),
-            InlineKeyboardButton(text="Extra🦋", callback_data="settings_back_helper"),
+            InlineKeyboardButton(text="Tools", callback_data="tools"),
+            InlineKeyboardButton(text="Extra", callback_data="settings_back_helper"),
         ],
         [InlineKeyboardButton(text="✯ Home ✯", callback_data="go_to_start")],
     ]
-    k = f"""Annie bot 🦋 help menu ✨*"""
+    k = f"""*Fubuki bot meanu *"""
     await callback_query.message.edit_text(
         text=k, reply_markup=InlineKeyboardMarkup(keyboard)
     )
@@ -579,7 +568,7 @@ async def music_callback(client: Client, callback_query: CallbackQuery):
                 InlineKeyboardButton(text="Sᴏɴɢ", callback_data="music_callback hb14"),
                 InlineKeyboardButton(text="Sᴘᴇᴇᴅ", callback_data="music_callback hb15"),
             ],
-            [InlineKeyboardButton(text="✯ ʙᴀᴄᴋ ✯", callback_data=f"feature")],
+            [InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data=f"feature")],
         ]
     )
 
@@ -642,7 +631,7 @@ async def management_callback(client: Client, callback_query: CallbackQuery):
                     text="ᴛ-ɢʀᴧᴘʜ", callback_data="management_callback hb12"
                 ),
             ],
-            [InlineKeyboardButton(text="✯ ʙᴀᴄᴋ ✯", callback_data=f"feature")],
+            [InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data=f"feature")],
         ]
     )
 
@@ -666,11 +655,11 @@ async def tools_callback(client: Client, callback_query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton(text="ғσηᴛ", callback_data="tools_callback hb4"),
-                InlineKeyboardButton(text="ϻᴧᴛʜ", callback_data="tools_callback hb5"),
+                
                 InlineKeyboardButton(text="ᴛᴧɢᴧʟʟ", callback_data="tools_callback hb6"),
             ],
             [
-                InlineKeyboardButton(text="ɪϻᴧɢє", callback_data="tools_callback hb7"),
+                
                 InlineKeyboardButton(text="ʜᴧsᴛᴧɢ", callback_data="tools_callback hb8"),
                 InlineKeyboardButton(
                     text="sᴛɪᴄᴋєʀs", callback_data="tools_callback hb9"
@@ -685,7 +674,7 @@ async def tools_callback(client: Client, callback_query: CallbackQuery):
                     text="ᴛʀ - ᴅʜ", callback_data="tools_callback hb12"
                 ),
             ],
-            [InlineKeyboardButton(text="✯ ʙᴀᴄᴋ ✯", callback_data=f"feature")],
+            [InlineKeyboardButton(text=" ʙᴀᴄᴋ ", callback_data=f"feature")],
         ]
     )
 
@@ -698,24 +687,19 @@ async def tools_callback(client: Client, callback_query: CallbackQuery):
 @app.on_callback_query(filters.regex("back_to_music"))
 async def feature_callback(client: Client, callback_query: CallbackQuery):
     keyboard = [
+        
         [
-            InlineKeyboardButton(
-                text="🎄 Galaxy 🎄",
-                callback_data="galaxy",
-            ),
+            InlineKeyboardButton(text="Music ", callback_data="music"),
+            InlineKeyboardButton(text="Managment ", callback_data="management"),
         ],
         [
-            InlineKeyboardButton(text="Music 🎧", callback_data="music"),
-            InlineKeyboardButton(text="Managment ✔", callback_data="management"),
+            InlineKeyboardButton(text="Tools", callback_data="tools"),
+            InlineKeyboardButton(text="Extra", callback_data="settings_back_helper"),
         ],
-        [
-            InlineKeyboardButton(text="Tools✨", callback_data="tools"),
-            InlineKeyboardButton(text="Extra🦋", callback_data="settings_back_helper"),
-        ],
-        [InlineKeyboardButton(text="✯ ʜᴏᴍᴇ ✯", callback_data="go_to_start")],
+        [InlineKeyboardButton(text=" ʜᴏᴍᴇ ", callback_data="go_to_start")],
     ]
 
-    k = f"""Annie bot 🦋 help menu ✨"""
+    k = f"""fubuki bot meanu"""
     await callback_query.message.edit_text(
         text=k,
         reply_markup=InlineKeyboardMarkup(keyboard),
@@ -764,115 +748,10 @@ def back_to_management(_):
     return upl
 
 
-@app.on_callback_query(filters.regex("about"))
-async def about_callback(client: Client, callback_query: CallbackQuery):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text="• Annie v2.0 •",
-                callback_data="annie",
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="⭐ Support ⭐", url=f"t.me/grandxmasti"),
-            InlineKeyboardButton(text="👨‍💻Developer", callback_data="developer"),
-        ],
-        [
-            InlineKeyboardButton(text="Guide 📃", callback_data="basic_guide"),
-            InlineKeyboardButton(text="🥀Source", callback_data="source"),
-        ],
-        [InlineKeyboardButton(text="🔙 Back", callback_data="go_to_start")],
-    ]
-    await callback_query.message.edit_text(
-        f"Hi i am Annie bot 🦋\nA powerful and awesome telegram group management and music player that gives you spam-free and fun environment for your groups :)\n\n**ᴀ ᴘᴏᴡᴇʀғᴜʟ ᴀɴᴅ ᴀᴡᴇsᴏᴍᴇ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ᴀɴᴅ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ᴛʜᴀᴛ ɢɪᴠᴇs ʏᴏᴜ sᴘᴀᴍ-ғʀᴇᴇ ᴀɴᴅ ғᴜɴ ᴇɴᴠɪʀᴏɴᴍᴇɴᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘs :)\n\n● I can restrict users.\n● I can greet users with customizable welcome messages and even set a group's rules.\n● I have a music player system.\n● I have almost all awaited group managing features like ban, mute, welcome, kick, federation, and many more.\n● I have a note-keeping system, blacklists, and even predetermined replies on certain keywords.\n● I check for admins' permissions before executing any command and more stuff\n\n➻ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʙᴀsɪᴄ ʜᴇʟᴩ ᴀɴᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ Annie bot 🦋.",
-        reply_markup=InlineKeyboardMarkup(buttons),
-    )
 
-@app.on_callback_query(filters.regex("annie"))
-async def about_callback(client: Client, callback_query: CallbackQuery):
-    buttons = [
-        [
-            InlineKeyboardButton(text="Guide 📃", url=f"t.me/grandxmasti"),
-            InlineKeyboardButton(text="👨‍💻Developer", callback_data="developer"),
-        ],
-        [
-            InlineKeyboardButton(text="Guide 📃", callback_data="basic_guide"),
-            InlineKeyboardButton(text="🥀Source", callback_data="source"),
-        ],
-        [InlineKeyboardButton(text="🔙 Back", callback_data="go_to_start")],
-    ]
-    await callback_query.message.edit_text(
-        f"We have added or upgraded the following plugins given below ✨\n\n• Added ai response and ai img(chat-gpt).\n• Added quotly.\n• Added emoji game.\n• Update howsall, judge, wish, afk feature.\n• Update write, bug and fedration tools.\n• Added gif and animated sticker kang also.\n• Added Website of bot for preview.\n• Added Pinterest,yt and Insta video downloader.\n• Added inbuilt music system.\n\nFor more info about Annie updates check website 🎄👀.",
-        reply_markup=InlineKeyboardMarkup(buttons),
-    )
 
 
 # If the back button has different meanings in various panels, you can set different callbacks
-@app.on_callback_query(filters.regex("support"))
-async def back_button_callback(client: Client, callback_query: CallbackQuery):
-    keyboard = [
-        [
-            InlineKeyboardButton(text="Developer 👨‍💻", user_id=config.OWNER_ID[0]),
-            InlineKeyboardButton(
-                text="🌱ɢɪᴛʜᴜʙ🌱",
-                url="https://github.com/moonshining1/annie-music/fork",
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="⛅Group⛅", url=f"https://t.me/grandxmasti"),
-            InlineKeyboardButton(text="🎄Update🎄", url=f"https://t.me/kittyxupdates "),
-        ],
-        [InlineKeyboardButton(text="✯ ʜᴏᴍᴇ ✯", callback_data="go_to_start")],
-    ]
-
-    await callback_query.message.edit_text(
-        "๏ Click on the button to get more about me.\n\nIf you find any error or bug on bot or want to give any feedback about the bot then you are welcome to support chat  (✿◠‿◠).",
-        reply_markup=InlineKeyboardMarkup(keyboard),
-    )
-
-
-@app.on_callback_query(filters.regex("galaxy"))
-async def back_button_callback(client: Client, callback_query: CallbackQuery):
-    keyboard = [
-        [
-            InlineKeyboardButton(text="Developer 👨‍💻", callback_data="developer"),
-            InlineKeyboardButton(
-                text="🌱Github🌱",
-                url="https://github.com/moonshining1/annie-music/fork",
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="Annie updates", url=f"https://t.me/kittyxupdates"),
-            InlineKeyboardButton(text="Share ur query💡", url=f"https://t.me/pwmbothub"),
-        ],
-        [InlineKeyboardButton(text="✯ ʜᴏᴍᴇ ✯", callback_data="go_to_start")],
-    ]
-    await callback_query.message.edit_text(
-        "Join our groups....🧊\n\nFor more info about meowsteric updates check support 🎄👀",
-        reply_markup=InlineKeyboardMarkup(keyboard),
-    )    
-
-@app.on_callback_query(filters.regex("source"))
-async def back_button_callback(client: Client, callback_query: CallbackQuery):
-    keyboard = [
-        [
-            InlineKeyboardButton(text="Developer 👨‍💻", callback_data="developer"),
-            InlineKeyboardButton(
-                text="🌱Repo🌱",
-                url="https://github.com/moonshining1/annie-music",
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="Annie updates", url=f"https://t.me/kittyxupdates"),
-            InlineKeyboardButton(text="Share ur query💡", url=f"https://t.me/pwmbothub"),
-        ],
-        [InlineKeyboardButton(text="✯ ʜᴏᴍᴇ ✯", callback_data="go_to_start")],
-    ]
-    
-    await callback_query.message.edit_text(
-        "Hey,\nThis is Annie bot 🦋\n\nAn open source telegram group management+ music bot\nHere is my source code [Repo](https://github.com/moonshining1/annie-music/fork) (✿◠‿◠)",
-        reply_markup=InlineKeyboardMarkup(keyboard),
-    )
 
 @app.on_callback_query(filters.regex("basic_guide"))
 async def settings_back_callback(client: Client, callback_query: CallbackQuery):
