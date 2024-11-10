@@ -60,4 +60,5 @@ def LanguageStart(mystic):
         except:
             language = get_string("en")
         return await mystic(_, message, language)
+
     return wrapper
