@@ -101,7 +101,7 @@ async def start_comm(client, message: Message, _):
                 parse_mode=ParseMode.HTML,
                 disable_web_page_preview=True,
             )
-        if name[0:3] == "sta":
+        if name[0:3] == "stats":
             m = await message.reply_text("🔎 ғᴇᴛᴄʜɪɴɢ ʏᴏᴜʀ ᴘᴇʀsᴏɴᴀʟ sᴛᴀᴛs.!")
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
