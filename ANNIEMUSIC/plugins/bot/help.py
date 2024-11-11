@@ -179,22 +179,7 @@ async def help_command(client, message):
         reply_markup=keyboard
             )
 
-@app.on_message(filters.command("start") & filters.group & ~BANNED_USERS)
-@LanguageStart
-async def help_command(client, message):
-    # Define the buttons
-    keyboard = InlineKeyboardMarkup(
-        [
-            [InlineKeyboardButton("• Add me •", url="https://t.me/MeowstericXBot?startgroup=true")],
-        ]
-    )
-    
-    # Send photo with text and buttons
-    await message.reply_photo(
-        photo="https://envs.sh/jl2.png",  # Replace with your photo path or URL
-        caption="» Here's how I can help you! Please click the button below to view all available commands. ✨",
-        reply_markup=keyboard
-    )
+
 
 
 @app.on_callback_query(filters.regex(r"help_(.*?)"))
