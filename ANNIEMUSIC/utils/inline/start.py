@@ -66,10 +66,10 @@ def music_start_panel(_):
             )
         ],
         [
-            InlineKeyboardButton(text=" Help ", callback_data="feature"),
-        ],
-        [
+            InlineKeyboardButton(text=" your orders ", callback_data="feature"),
             InlineKeyboardButton(text=" Owner ", callback_data="developer"),
+            InlineKeyboardButton(text=" support ", callback_data="developer"),
+            
         ],
     ]
     return buttons
