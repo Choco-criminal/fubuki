@@ -19,17 +19,17 @@ load_dotenv()
 
 # Get it from my.telegram.org
 
-API_ID = int(getenv("API_ID", ""))
+API_ID = int(getenv("API_ID", "23128450"))
 
-API_HASH = getenv("API_HASH")
+API_HASH = getenv("API_HASH","e17326ba974a522dddd8b9e9285d592a")
 
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "7764287955:AAE0zQiW7YdZouzfj70pxtWG_zp9FsCHAD0")
 
 BOT_USERNAME = getenv("BOT_USERNAME", "musicXanime_bot")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://1:1@cluster0.ufblk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 
 CLEANMODE_DELETE_MINS = int(
@@ -46,7 +46,7 @@ DURATION_LIMIT_MIN = int(
 
 EXTRA_PLUGINS = getenv(
     "EXTRA_PLUGINS",
-    "True",
+    "False",
 )
 
 # Fill True if you want to load extra plugins
@@ -54,7 +54,7 @@ EXTRA_PLUGINS = getenv(
 
 EXTRA_PLUGINS_REPO = getenv(
     "EXTRA_PLUGINS_REPO",
-    "https://github.com/Moonshining1/Extra-Plugin", 
+    "", 
 )
 # iss link ko mt remove krna harmai ye management wlaa hai isme hi sub code hai management ke liye..
 # Fill here the external plugins repo where plugins that you want to load
@@ -72,12 +72,12 @@ SONG_DOWNLOAD_DURATION = int(
 
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002300615380"))
 
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "7297381612").split())
+    map(int, getenv("OWNER_ID", "1266240012").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -101,10 +101,10 @@ GIT_TOKEN = getenv(
 )
 
 # Token allow for access youtube songs. [ True = use token data, False = use cookies ]
-TOKEN_ALLOW = os.getenv("TOKEN_ALLOW", "False")
+TOKEN_ALLOW = os.getenv("TOKEN_ALLOW", "True")
 
 # Auto Gcast/Broadcast Handler, Write:- [On / Off] During Hosting.
-AUTO_GCAST = os.getenv("AUTO_GCAST", "on")
+AUTO_GCAST = os.getenv("AUTO_GCAST", "off")
 
 # Auto Broadcast Message That You Want Use In Auto Broadcast In All Groups.
 AUTO_GCAST_MSG = getenv("AUTO_GCAST_MSG", "")
@@ -181,7 +181,7 @@ SET_CMDS = getenv("SET_CMDS", "False")
 
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @VIPStringBot
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION", "BQFg6YIAjRBG-RD49k0UhCc_sj9hy2Oqn0d8Gp_5al42X3Yb5MZXOrHg_z1QsYH6QYV-le1p_k0Le-YpfSl9QdSEI8EBGH7D3pNavOHuGoGk_eaUCRla3RFhv0I74kOhey1Fs7wNKj1LfiI2xGhMbWvxwFFE54t8Yb_Hk0-oqF8m3B5VIf_Ru4Eb-zMbe9TybtblqpjtjUzBQLAcQQIZkfG8ipBEE5TsWtbXUZWVnVWEqcCbgWx-XrCvQsSChyS78iZ9t2EZOdUwLKjvh6I-Uq38DuMHVuKVxdPFWP_fM6KOA60t3hImxoCIJYYmOI1TyzU0vm8esOb6MZgaHNa-8KaRt861ZwAAAAFN6RNgAA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
